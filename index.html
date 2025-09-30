@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethan Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <nav class="nav">
+        <span class="logo">Ethan.dev</span>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span class="nav-toggle__bar"></span>
+        </button>
+        <ul class="nav__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Highlights</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__content">
+          <p class="hero__tag">Web & App Developer</p>
+          <h1>Crafting digital experiences that feel effortless.</h1>
+          <p class="hero__lead">
+            I build responsive web apps and thoughtful mobile interfaces with a
+            focus on clean architecture, intuitive UX, and maintainable code.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">View Highlights</a>
+            <a class="btn" href="#contact">Let's Collaborate</a>
+          </div>
+        </div>
+        <div class="hero__image" aria-hidden="true">
+          <div class="hero__code-card">
+            <p class="code-header">app.js</p>
+            <pre><code>const build = async () =&gt; {
+  const idea = await research();
+  const ui = design(idea);
+  const app = develop(ui);
+  return launch(app);
+};</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section__content">
+          <h2>About</h2>
+          <p>
+            Hi, I'm an end-to-end product engineer who bridges design and
+            engineering. I iterate quickly, communicate clearly, and ship
+            polished experiences that solve real problems across web and mobile
+            platforms.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="skills">
+        <div class="section__content">
+          <h2>Skills</h2>
+          <div class="chip-grid">
+            <span class="chip">TypeScript</span>
+            <span class="chip">React Native</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">JAVA</span>
+            <span class="chip">Spring</span>
+            <span class="chip">Supabase</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">CI/CD</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section__content">
+          <h2>Highlights</h2>
+          <div class="project-grid">
+            <article class="project-card">
+              <h3>Beezly Membership Platform</h3>
+              <p>
+                Spearheaded the end-to-end build of Beezly's mobile membership
+                experience, covering onboarding, recurring payments, and
+                content delivery for lifestyle coaches.
+              </p>
+              <ul>
+                <li>React Native, TypeScript, Supabase</li>
+                <li>Developed scheduling, payments, and real-time admin tools for member management</li>
+              </ul>
+              <a href="beezly.html" class="project-card__link">Project recap →</a>
+            </article>
+
+            <article class="project-card">
+              <h3>LMS Platform Engineer</h3>
+              <p>
+                Shipped core features for a B2B LMS provider, modernizing the
+                course authoring flow and tightening mobile/desktop parity for
+                enterprise clients.
+              </p>
+              <ul>
+                <li>Java, Spring Boot, React</li>
+                <li>Delivered analytics dashboards and automation that reduced instructor support load</li>
+              </ul>
+              <a href="lms.html" class="project-card__link">Request details →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="contact">
+        <div class="section__content">
+          <h2>Contact</h2>
+          <!-- <p>
+            Ready to collaborate or have a project in mind? Reach out and let's
+            turn ideas into delightful products.
+          </p> -->
+          <div class="contact-links">
+            <a href="mailto:ethankim901@gmail.com">ethankim901@gmail.com</a>
+            <a href="https://github.com/ethanK901" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://linkedin.com/in/ethankim901" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <!-- <p>© <span id="currentYear"></span> Your Name. Built with passion.</p> -->
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
