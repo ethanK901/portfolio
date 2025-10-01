@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beezly Membership Platform • Ethan Portfolio</title>
+    <title>Beezly Retail Intelligence • Ethan Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,64 +12,269 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="beezly-page">
     <header class="site-header" id="top">
       <nav class="nav">
         <a class="logo" href="index.html">Ethan.dev</a>
-        <ul class="nav__links">
-          <!-- <li><a href="index.html#projects">Highlights</a></li>
-          <li><a href="index.html#contact">Contact</a></li> -->
-        </ul>
+        <ul class="nav__links"></ul>
       </nav>
     </header>
 
     <main>
-      <section class="section">
-        <div class="section__content">
-          <p class="hero__tag">Case Study</p>
-          <h1>Beezly Membership Platform</h1>
-          <p>
-            End-to-end product build for Beezly, delivering a subscription-based
-            mobile membership experience that helps lifestyle coaches launch and
-            grow paid communities.
-          </p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="index.html#contact">Start a project</a>
-            <a class="btn" href="index.html#projects">Back to highlights</a>
+      <section class="beezly-hero">
+        <div class="section__content beezly-hero__grid">
+          <div class="beezly-hero__copy">
+            <p class="beezly-badge">Retail price intelligence</p>
+            <h1>Shipping Beezly’s neighbourhood pricing platform.</h1>
+            <p class="beezly-lead">
+              I led product engineering for Beezly’s MVP—turning receipt and barcode scans into trustworthy local price data for Vancouver’s first hive of shoppers.
+            </p>
+            <p class="beezly-sub">
+              The brief: capture offline purchase data, surface savings in real time, and launch a polished mobile experience in four months without sacrificing data integrity or compliance.
+            </p>
+            <div class="hero__actions">
+              <!-- <a class="btn btn--beezly" href="index.html#contact">Let's build together</a>
+              <a class="btn btn--ghost" href="#case-overview">Skip to case study</a> -->
+            </div>
+            <dl class="beezly-meta">
+              <div>
+                <dt>Role</dt>
+                <dd>Front End Developer</dd>
+              </div>
+              <!-- <div>
+                <dt>Team</dt>
+                <dd>Full Stack Developer, Front End Developer, Back End Developer</dd>
+              </div> -->
+              <div>
+                <dt>Timeline</dt>
+                <dd>3 months → MVP</dd>
+              </div>
+              <div>
+                <dt>Stack</dt>
+                <dd>React Native, TypeScript, Nest.js, Supabase</dd>
+              </div>
+            </dl>
+            <ul class="beezly-trust">
+              <li>⚙️ OCR + normalization pipeline</li>
+              <li>📱 React Native + Supabase architecture</li>
+              <li>🔐 Double opt-in & Stripe compliant flows</li>
+            </ul>
+          </div>
+
+          <div class="beezly-hero__visual">
+            <figure>
+              <img
+                src="assets/beezly_scan.png"
+                alt="Beezly mobile app showing receipt comparison"
+                loading="lazy"
+              />
+              <figcaption>Receipt & barcode journeys delivered for the MVP.</figcaption>
+            </figure>
           </div>
         </div>
       </section>
 
-      <section class="section section--alt">
-        <div class="section__content">
-          <h2>Project Overview</h2>
-          <p>
-            Partnered with the founding team to turn a coaching concept into a
-            production-ready product. The MVP shipped across iOS and Android in
-            under four months, balancing rapid iteration with maintainable code
-            structure for future growth.
-          </p>
-          <ul>
-            <li>Defined user journeys, low-fidelity prototypes, and release roadmap alongside stakeholders.</li>
-            <li>Implemented onboarding, profile creation, and member segmentation for personalized content feeds.</li>
-            <li>Integrated Stripe for recurring payments, eligibility checks, and automated receipts.</li>
-          </ul>
+      <section id="case-overview" class="section beezly-section">
+        <div class="section__content beezly-intro">
+          <div>
+            <p class="beezly-badge beezly-badge--muted">Problem & context</p>
+            <h2>Unlock reliable local pricing data from offline purchases.</h2>
+            <p>
+              Most price comparison apps rely on e-commerce feeds—Beezly had to crowdsource grocery receipts and barcodes while keeping the experience fast, delightful, and trustworthy for founding members.
+            </p>
+            <div class="beezly-split">
+              <div>
+                <h3 class="beezly-heading-sm">Product goals</h3>
+                <ul class="beezly-list">
+                  <li>Collect enough structured data to launch a neighbourhood-specific pricing graph.</li>
+                  <li>Deliver real-time price checks and savings insights right after a scan completes.</li>
+                  <li>Build community trust with transparent onboarding, privacy, and double opt-in.</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="beezly-heading-sm">My responsibilities</h3>
+                <ul class="beezly-list">
+                  <li>Defined architecture spanning React Native clients, Supabase services, and Next.js marketing.</li>
+                  <li>Implemented OCR/normalisation pipelines, waitlist + membership flows, and Stripe subscriptions.</li>
+                  <li>Led delivery rituals (sprint planning, QA sign-off, release) to hit the four-month launch window.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <aside class="beezly-metrics">
+            <div class="beezly-metric">
+              <span class="beezly-metric__value">3 months</span>
+              <span class="beezly-metric__label">from kickoff to soft launch</span>
+            </div>
+            <div class="beezly-metric">
+              <span class="beezly-metric__value">99.2%</span>
+              <span class="beezly-metric__label">receipt parsing accuracy after tuning</span>
+            </div>
+            <div class="beezly-metric">
+              <span class="beezly-metric__value">60% less ops</span>
+              <span class="beezly-metric__label">manual admin replaced by automations</span>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section section--alt beezly-section">
         <div class="section__content">
-          <h2>Impact</h2>
-          <ul>
-            <li>Launched beta with 15 coaches and 1,200 members while maintaining sub-second load times.</li>
-            <li>Reduced manual admin tasks by 60% through real-time dashboards and push notification workflows.</li>
-            <li>Established analytics tracking for retention, churn, and revenue cohorts to inform roadmap decisions.</li>
-          </ul>
+          <div class="beezly-section-heading">
+            <p class="beezly-badge">Approach</p>
+            <h2>Balancing velocity with data quality.</h2>
+            <p>
+              I focused on three engineering pillars—accurate ingestion, trustworthy pricing intelligence, and actionable insights—so the founding team could prove product-market fit without technical debt.
+            </p>
+          </div>
+
+          <div class="beezly-feature-grid">
+            <article class="beezly-feature-card">
+              <div class="beezly-feature-card__icon">🧾</div>
+              <h3>Receipt ingestion pipeline</h3>
+              <p>
+                Built a Supabase Edge + Python service that runs Tesseract OCR with custom dictionaries and regex normalisation to deliver structured line items in under three seconds.
+              </p>
+              <span class="beezly-chip">Python · Edge Functions</span>
+            </article>
+
+            <article class="beezly-feature-card">
+              <div class="beezly-feature-card__icon">📍</div>
+              <h3>Neighbourhood pricing graph</h3>
+              <p>
+                Modelled store/item relationships in Postgres, enforcing Supabase RLS so community data stays private while enabling hyper-local comparisons inside the React Native app.
+              </p>
+              <span class="beezly-chip">Postgres · RLS</span>
+            </article>
+
+            <article class="beezly-feature-card">
+              <div class="beezly-feature-card__icon">💡</div>
+              <h3>Insights & automations</h3>
+              <p>
+                Connected push notifications, savings insights, and Stripe-powered rewards into an Expo-managed workflow—complete with retry-safe webhooks and analytics instrumentation.
+              </p>
+              <span class="beezly-chip">Expo · Stripe</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section beezly-section">
+        <div class="section__content">
+          <div class="beezly-section-heading">
+            <p class="beezly-badge beezly-badge--muted">System flows</p>
+            <h2>How scanning turns into intelligence.</h2>
+            <p>
+              I prototyped and productionised both flows end-to-end—from camera capture and background jobs to UI affordances that reward members for contributing data.
+            </p>
+          </div>
+
+          <div class="beezly-process">
+            <article class="beezly-process__card">
+              <div class="beezly-process__media">
+                <img src="assets/receipt-before.png" alt="Uploading a receipt inside the Beezly app" loading="lazy" />
+                <img src="assets/receipt-after.png" alt="Structured receipt data after processing" loading="lazy" />
+              </div>
+              <div class="beezly-process__content">
+                <h3>Receipt scanning</h3>
+                <ul class="beezly-list beezly-list--compact">
+                  <li>Optimised Tesseract with store-specific corpora and deterministic post-processing for 99%+ item extraction.</li>
+                  <li>Queued fallback reviews via Supabase functions so edge cases never blocked the happy path.</li>
+                  <li>Surfaced savings insights instantly using cached neighbourhood averages fetched from the pricing graph.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="beezly-process__card">
+              <div class="beezly-process__media">
+                <img src="assets/barcode-before.png" alt="Scanning a product barcode in Beezly" loading="lazy" />
+                <img src="assets/barcode-after.png" alt="Comparing barcode results across stores" loading="lazy" />
+              </div>
+              <div class="beezly-process__content">
+                <h3>Barcode scanning</h3>
+                <ul class="beezly-list beezly-list--compact">
+                  <li>Leveraged a UPC database and Supabase caching to deliver sub-200ms product lookups.</li>
+                  <li>Tracked price history with scheduled jobs, exposing trend charts without hammering the database.</li>
+                  <li>Integrated smart shopping lists that sync across devices using Expo SecureStore + optimistic updates.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt beezly-section">
+        <div class="section__content">
+          <div class="beezly-section-heading">
+            <p class="beezly-badge">Impact</p>
+            <h2>What shipped and why it mattered.</h2>
+          </div>
+
+          <div class="beezly-impact-grid">
+            <article class="beezly-impact-card">
+              <h3>Engineering impact</h3>
+              <p>
+                Automated CI/CD with Expo EAS, contract-tested webhooks, and Sentry monitoring—keeping crash-free sessions above 99% through beta.
+              </p>
+            </article>
+            <article class="beezly-impact-card">
+              <h3>Beta traction</h3>
+              <p>
+                Launched to 15 lifestyle coaches and 1,200 shoppers, maintaining sub-second app load times on low-end Android devices.
+              </p>
+            </article>
+            <article class="beezly-impact-card">
+              <h3>Operational lift</h3>
+              <p>
+                Waitlist, onboarding, and comms automations replaced 60% of manual founder tasks, freeing time for partnerships.
+              </p>
+            </article>
+            <article class="beezly-impact-card">
+              <h3>Data confidence</h3>
+              <p>
+                Instrumented retention, churn, and GMV cohorts directly in Supabase with Looker Studio dashboards for the founding team.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section beezly-section">
+        <div class="section__content">
+          <div class="beezly-waitlist-callout">
+            <div>
+              <p class="beezly-badge beezly-badge--muted">Early access</p>
+              <h2>Vancouver-first waitlist launch</h2>
+              <p>
+                We targeted high-density neighbourhoods first, using contribution thresholds to unlock each hive and keep price data trustworthy.
+              </p>
+              <div class="beezly-pills">
+                <span><strong>Neighbourhood gating:</strong> unlocks tied to scan volume & accuracy.</span>
+                <span><strong>Community rewards:</strong> Stripe-powered credits for top contributors.</span>
+                <span><strong>Privacy-first:</strong> transparent policies + easy opt-out baked in.</span>
+              </div>
+            </div>
+            <div class="beezly-tech-notes">
+              <h3>Technical considerations</h3>
+              <ul class="beezly-list beezly-list--compact">
+                <li>Double opt-in email flow built with Supabase Auth + Resend to keep the list clean.</li>
+                <li>Stripe webhooks hardened with signature rotation and idempotent retries.</li>
+                <li>Expo EAS pipelines gated by Cypress smoke tests before promoting releases.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Ethan Kim — Built with care for the hive.</p>
+      <!-- <a class="back-to-top" href="#top">Back to top</a> -->
     </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
