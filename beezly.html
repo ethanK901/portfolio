@@ -29,9 +29,9 @@
             <p class="beezly-lead">
               I led product engineering for Beezly’s MVP—turning receipt and barcode scans into trustworthy local price data for Vancouver’s first hive of shoppers.
             </p>
-            <p class="beezly-sub">
-              The brief: capture offline purchase data, surface savings in real time, and launch a polished mobile experience in four months without sacrificing data integrity or compliance.
-            </p>
+            <!-- <p class="beezly-sub">
+              The brief: capture offline purchase data, surface savings in real time, and launch a polished mobile experience in three months without sacrificing data integrity or compliance.
+            </p> -->
             <div class="hero__actions">
               <!-- <a class="btn btn--beezly" href="index.html#contact">Let's build together</a>
               <a class="btn btn--ghost" href="#case-overview">Skip to case study</a> -->
@@ -86,17 +86,17 @@
               <div>
                 <h3 class="beezly-heading-sm">Product goals</h3>
                 <ul class="beezly-list">
-                  <li>Collect enough structured data to launch a neighbourhood-specific pricing graph.</li>
-                  <li>Deliver real-time price checks and savings insights right after a scan completes.</li>
-                  <li>Build community trust with transparent onboarding, privacy, and double opt-in.</li>
+                  <li>Give shoppers transparency by comparing nearby grocery prices and easing frustration with opaque offline pricing.</li>
+                  <li>Transform receipt and barcode scans into structured insights in about three seconds for smarter spending decisions.</li>
+                  <li>Launch Vancouver’s community with privacy-first, double opt-in onboarding that keeps trust at the core.</li>
                 </ul>
               </div>
               <div>
                 <h3 class="beezly-heading-sm">My responsibilities</h3>
                 <ul class="beezly-list">
-                  <li>Defined architecture spanning React Native clients, Supabase services, and Next.js marketing.</li>
-                  <li>Implemented OCR/normalisation pipelines, waitlist + membership flows, and Stripe subscriptions.</li>
-                  <li>Led delivery rituals (sprint planning, QA sign-off, release) to hit the four-month launch window.</li>
+                  <li>Owned the React Native front end, centering on barcode scanning and receipt capture UX.</li>
+                  <li>Built flows that surface real-time price comparisons and savings insights from structured data.</li>
+                  <li>Partnered across the stack to keep the three-second ingestion target and compliance-ready launches on track.</li>
                 </ul>
               </div>
             </div>
@@ -111,10 +111,10 @@
               <span class="beezly-metric__value">99.2%</span>
               <span class="beezly-metric__label">receipt parsing accuracy after tuning</span>
             </div>
-            <div class="beezly-metric">
+            <!-- <div class="beezly-metric">
               <span class="beezly-metric__value">60% less ops</span>
               <span class="beezly-metric__label">manual admin replaced by automations</span>
-            </div>
+            </div> -->
           </aside>
         </div>
       </section>
@@ -132,29 +132,29 @@
           <div class="beezly-feature-grid">
             <article class="beezly-feature-card">
               <div class="beezly-feature-card__icon">🧾</div>
-              <h3>Receipt ingestion pipeline</h3>
+              <h3>Receipt ingestion flow</h3>
               <p>
-                Built a Supabase Edge + Python service that runs Tesseract OCR with custom dictionaries and regex normalisation to deliver structured line items in under three seconds.
+                “In the receipt scanning flow, we upload captured images to the backend and manage timeouts and retries, enabling users to review and edit items.”
               </p>
-              <span class="beezly-chip">Python · Edge Functions</span>
+              <!-- <span class="beezly-chip">Python · Edge Functions</span> -->
             </article>
 
             <article class="beezly-feature-card">
               <div class="beezly-feature-card__icon">📍</div>
-              <h3>Neighbourhood pricing graph</h3>
+              <h3>Local pricing view</h3>
               <p>
-                Modelled store/item relationships in Postgres, enforcing Supabase RLS so community data stays private while enabling hyper-local comparisons inside the React Native app.
+                “We rendered nearby store price cards and charts, enabling users to compare regional market rates.”
               </p>
-              <span class="beezly-chip">Postgres · RLS</span>
+              <!-- <span class="beezly-chip">Postgres · RLS</span> -->
             </article>
 
             <article class="beezly-feature-card">
               <div class="beezly-feature-card__icon">💡</div>
-              <h3>Insights & automations</h3>
+              <h3>In-app insights</h3>
               <p>
-                Connected push notifications, savings insights, and Stripe-powered rewards into an Expo-managed workflow—complete with retry-safe webhooks and analytics instrumentation.
+                “We queued in-app notifications for key actions like barcode scanning and price registration, and displayed acquired badges/tier changes via follow-up toast notifications.”
               </p>
-              <span class="beezly-chip">Expo · Stripe</span>
+              <!-- <span class="beezly-chip">Expo · Stripe</span> -->
             </article>
           </div>
         </div>
@@ -194,9 +194,9 @@
               <div class="beezly-process__content">
                 <h3>Barcode scanning</h3>
                 <ul class="beezly-list beezly-list--compact">
-                  <li>Leveraged a UPC database and Supabase caching to deliver sub-200ms product lookups.</li>
-                  <li>Tracked price history with scheduled jobs, exposing trend charts without hammering the database.</li>
-                  <li>Integrated smart shopping lists that sync across devices using Expo SecureStore + optimistic updates.</li>
+                  <li>Implemented an expo-camera-based scanner interface to identify UPC/EAN barcodes, correcting 12-digit UPCs to 13-digit EANs to ensure consistent data.</li>
+                  <li>Scanning results are transmitted via API to retrieve product information, immediately routing discovered items to detailed screens to streamline the UX.</li>
+                  <li>Integrated score and badge information to queue scan reward notifications, validating user motivation scenarios.</li>
                 </ul>
               </div>
             </article>
@@ -204,7 +204,7 @@
         </div>
       </section>
 
-      <section class="section section--alt beezly-section">
+      <!-- <section class="section section--alt beezly-section">
         <div class="section__content">
           <div class="beezly-section-heading">
             <p class="beezly-badge">Impact</p>
@@ -238,31 +238,40 @@
             </article>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="section beezly-section">
         <div class="section__content">
           <div class="beezly-waitlist-callout">
             <div>
               <p class="beezly-badge beezly-badge--muted">Early access</p>
-              <h2>Vancouver-first waitlist launch</h2>
+              <h2>Launching Vancouver’s first hive waitlist</h2>
               <p>
-                We targeted high-density neighbourhoods first, using contribution thresholds to unlock each hive and keep price data trustworthy.
+                I shipped the live waitlist at <a href="https://www.beezly.app" target="_blank" rel="noopener">beezly.app</a>—anchoring the copy around “Join Vancouver’s first wave of early adopters” and “Every scan makes the hive smarter” to highlight the neighbourhood-first rollout and community flywheel.
               </p>
               <div class="beezly-pills">
-                <span><strong>Neighbourhood gating:</strong> unlocks tied to scan volume & accuracy.</span>
-                <span><strong>Community rewards:</strong> Stripe-powered credits for top contributors.</span>
-                <span><strong>Privacy-first:</strong> transparent policies + easy opt-out baked in.</span>
+                <span><strong>Soft launch in Vancouver:</strong> hyperlocal partnerships and store coverage shape the initial hive.</span>
+                <span><strong>Community-driven expansion:</strong> region & persona fields (shopper, retailer, brand) map demand before unlocking the next city.</span>
+                <span><strong>Quality + trust:</strong> double opt-in, privacy copy, and transparent unsubscribes keep the hive clean.</span>
               </div>
             </div>
-            <div class="beezly-tech-notes">
+            <div class="beezly-icon-area">
+              <img
+                class="beezly-waitlist-logo"
+                src="assets/icon.png"
+                alt="Beezly logo"
+                loading="lazy"
+              />
+              <h2><a href="https://www.beezly.app" target="_blank" rel="noopener">beezly.app</a></h2>
+            </div>
+            <!-- <div class="beezly-tech-notes">
               <h3>Technical considerations</h3>
               <ul class="beezly-list beezly-list--compact">
-                <li>Double opt-in email flow built with Supabase Auth + Resend to keep the list clean.</li>
-                <li>Stripe webhooks hardened with signature rotation and idempotent retries.</li>
-                <li>Expo EAS pipelines gated by Cypress smoke tests before promoting releases.</li>
+                <li>Supabase Auth + Resend run the confirmation loop, keeping signup double opt-in and CASL compliant.</li>
+                <li>Region and role metadata sync into Supabase to prioritise the next hive via automated dashboard slices.</li>
+                <li>Persona tags drive follow-up automations so shoppers, retailers, and brand partners land in the right onboarding stream.</li>
               </ul>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
